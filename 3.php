@@ -27,5 +27,16 @@ class Empleado {
         }
     }
 }
-$empleado1 = new Empleado(8,8,"Alfonso");
+?>
+<form action="" method="POST">
+    <label>Ingresa el nombre de el empleado: <input type="text" name="nombre"></label><br><br>
+    <label>Ingresa el salario por hora de el empleado: <input type="text" name="salarioHora"></label><br><br>
+    <label>Ingresa el total de horas trabajadas por dia: <input type="text" name="horaDia"></label><br><br>
+    <input type="submit">
+</form>
+<?php
+$nombre = $_POST['nombre'];
+$salarioHora = $_POST['salarioHora'];
+$horaDia = $_POST['horaDia'];
+$empleado1 = new Empleado($salarioHora,$horaDia,$nombre);
 $empleado1 -> getInfo();
